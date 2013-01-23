@@ -1,6 +1,6 @@
 TestNohup::Application.routes.draw do
 
-  resoucers :students
+  resources :students
 
   root :to => 'welcome#index'
 
