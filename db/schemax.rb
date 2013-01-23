@@ -15,38 +15,32 @@ ActiveRecord::Schema.define(:version => 20130123073537) do
 
   create_table "classrooms", :force => true do |t|
     t.string   "name"
-    t.integer  "matter_id"
-    t.integer  "student_id"
-    t.integer  "teacher_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "teachers_id"
+    t.integer  "students_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "matters", :force => true do |t|
     t.string   "name"
-    t.integer  "teacher_id"
-    t.integer  "classroom_id"
-    t.integer  "student_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.integer  "teachers_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "students", :force => true do |t|
-    t.string   "name",         :null => false
-    t.integer  "classroom_id"
-    t.integer  "teacher_id"
-    t.integer  "matter_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.string   "name",          :null => false
+    t.integer  "classrooms_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "teachers", :force => true do |t|
-    t.string   "name",         :null => false
-    t.integer  "classroom_id"
-    t.integer  "matter_id"
-    t.integer  "student_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.string   "name",          :null => false
+    t.integer  "classrooms_id"
+    t.integer  "matters_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
 end

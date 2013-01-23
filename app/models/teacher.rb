@@ -2,7 +2,8 @@ class Teacher < ActiveRecord::Base
 
 	attr_accessible :name
 
-	belongs_to :classroom
-	belongs_to :matter
+	has_many :matters
+	has_many :classrooms, :through => :matters
+	has_many :students, :through => :classroms
 
 end

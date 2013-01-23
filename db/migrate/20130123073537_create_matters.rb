@@ -2,13 +2,13 @@ class CreateMatters < ActiveRecord::Migration
   def change
     create_table :matters do |t|
       t.string :name
-      t.references :teachers
+      t.references :teacher, :classroom, :student
 
       t.timestamps
       
     end
 
-    add_index :teachers, :teachers_id
+    #add_index :teacher_id
 
   end
 end

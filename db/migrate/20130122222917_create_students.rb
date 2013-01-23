@@ -2,12 +2,12 @@ class CreateStudents < ActiveRecord::Migration
   def change
 		create_table :students do |t|
       t.string :name, null: false
-      t.references :classrooms
+      t.references :classroom, :teacher, :matter
 
       t.timestamps
     end
 
-    add_index :classrooms, :classrooms_id
+    #add_index :classrooms_id
 	end
 
 	def down

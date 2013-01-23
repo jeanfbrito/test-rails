@@ -1,0 +1,17 @@
+s1 = Student.new name: "Jean"
+s2 = Student.new name: "Patrick"
+
+c1 = Classroom.new name: "B01"
+c2 = Classroom.new name: "B02"
+
+m1 = Matter.new name: "Fisica"
+m2 = Matter.new name: "Historia"
+
+t1 = Teacher.new name: "Assis"
+t2 = Teacher.new name: "Azambuja"
+
+
+c1.students << s1
+c1.students << s2
+
+
