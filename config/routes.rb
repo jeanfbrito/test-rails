@@ -1,5 +1,7 @@
 TestNohup::Application.routes.draw do
 
+  resoucers :students
+
   root :to => 'welcome#index'
 
   # The priority is based upon order of creation:
