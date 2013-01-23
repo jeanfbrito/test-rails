@@ -1,7 +1,7 @@
 class AddStudentsToClassrooms < ActiveRecord::Migration
   def change
     
-    add_column :classrooms, :student_id, :integer
+    add_column :classrooms, :students_id, :integer
     
   end
 end
